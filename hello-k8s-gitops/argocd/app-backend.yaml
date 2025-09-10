@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/banjoSolomon/hello-k8s-gitops'
+    repoURL: 'https://github.com/banjoSolomon/Argocd'
     targetRevision: main
     path: 'gitops/backend'
   destination:
