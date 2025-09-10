@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/banjoSolomon/hello-k8s-gitops.git'
+    repoURL: 'https://github.com/banjoSolomon/hello-k8s-gitops'
     targetRevision: main
     path: 'gitops/backend'
   destination:
