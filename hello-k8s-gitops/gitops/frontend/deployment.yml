@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-frontend
+  labels:
+    app: hello-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-frontend
+  template:
+    metadata:
+      labels:
+        app: hello-frontend
+    spec:
+      containers:
+        - name: hello-frontend
+          image: hello-frontend:0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

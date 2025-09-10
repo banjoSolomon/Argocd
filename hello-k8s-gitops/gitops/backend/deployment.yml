@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-backend
+  labels:
+    app: hello-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-backend
+  template:
+    metadata:
+      labels:
+        app: hello-backend
+    spec:
+      containers:
+        - name: hello-backend
+          image: hello-backend:0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"

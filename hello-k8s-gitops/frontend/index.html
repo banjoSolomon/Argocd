@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Hello Frontend</title>
+</head>
+<body>
+  <h1>Hello Frontend</h1>
+  <div id="msg">Loading...</div>
+
+  <script>
+    async function load(){
+      try {
+        const res = await fetch('/api/message');
+        const j = await res.json();
+        document.getElementById('msg').innerText = j.message + ' — ' + j.time;
+      } catch (e) {
+        document.getElementById('msg').innerText = 'Error: ' + e;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>
