@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/banjoSolomon/Argocd.git'
-    targetRevision: main
+    targetRevision: HEAD
     path: 'gitops/backend'
   destination:
     server: 'https://kubernetes.default.svc'
