@@ -16,11 +16,11 @@ spec:
               service:
                 name: hello-backend
                 port:
-                  number: 80   # backend Service exposes port 80 → forwards to 3000
+                  number: 80   
           - path: /
             pathType: Prefix
             backend:
               service:
                 name: hello-frontend
                 port:
-                  number: 80
+                  number: 80   
