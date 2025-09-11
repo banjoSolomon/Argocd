@@ -11,7 +11,7 @@
   <script>
     async function load(){
       try {
-        const res = await fetch('/api/message');
+        const res = await fetch('http://127.0.0.1:36695/api/message');
         const j = await res.json();
         document.getElementById('msg').innerText = j.message + ' — ' + j.time;
       } catch (e) {
